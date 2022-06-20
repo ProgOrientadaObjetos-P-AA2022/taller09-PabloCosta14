@@ -91,7 +91,7 @@ public class Ejecutor {
                         String prest = entry.nextLine();
                         System.out.println("Ingrese el nivel de estudio");
                         String est = entry.nextLine();
-                        System.out.println("Ingrese la nombre de la unidad educativa");
+                        System.out.println("Ingrese el nombre de la unidad educativa");
                         String nedu = entry.nextLine();
                         System.out.println("Ingrese las siglas de la unidad educativa");
                         String siglas = entry.nextLine();
