@@ -78,11 +78,17 @@ public class PrestamoAutomovil extends Prestamo {
         cadenaFinal = String.format("%s\nPrestamoAutomovil\n"
                 + "Tipo de automovil: %s\n"
                 + "Marca de automovil: %s\n"
+                + "Nombre del usuario: %s\n"
+                + "Apellido del usuario: %s\n"
+                + "Username del usuario: %s\n"
                 + "Valor del automovil: %.2f\n"
                 + "Valor mensual del pago prestamo automovil : %.2f\n",
                 cadenaFinal,
                 obtenerTipo(),
                 obtenerMarca(),
+                obtenerGarante1().obtenerNombre(),
+                obtenerGarante1().obtenerApellido(),
+                obtenerGarante1().obtenerUsername(),
                 obtenerValorAuto(),
                 obtenerMensualPrestamoAutomovil());
 

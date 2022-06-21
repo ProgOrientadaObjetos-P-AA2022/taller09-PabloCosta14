@@ -27,6 +27,7 @@ public class Ejecutor {
 
         String cadena1 = "";
         String cadena2 = "";
+
         do {
 
             System.out.println("Ingrese 1 si desea ingrear datos para un PrestamoAutomovil \n"
@@ -51,7 +52,9 @@ public class Ejecutor {
                 flag = false;
             }
             if (opcion == 1 || opcion == 2) {
+
                 entry.nextLine();
+                System.out.println("Datos del beneficiario");
                 System.out.println("Ingrese su Nombre");
                 String n = entry.nextLine();
                 System.out.println("Ingrese su Apellido");
@@ -69,16 +72,32 @@ public class Ejecutor {
                         entry.nextLine();
                         System.out.println("Ingrese la ciudad del prestamo");
                         String pres = entry.nextLine();
+
                         System.out.println("Ingrese el tipo de automovil");
                         String tipo = entry.nextLine();
+
                         System.out.println("Ingrese la marca del automovil");
                         String marca = entry.nextLine();
+
+                        System.out.println("Ingrese su Nombre");
+                        String no = entry.nextLine();
+
+                        System.out.println("Ingrese su Apellido");
+                        String ape = entry.nextLine();
+
+                        System.out.println("Ingrese su Username");
+                        String user = entry.nextLine();
+
                         System.out.println("Ingrese el valor del automovil");
                         double valor = entry.nextDouble();
 
+                        Persona per = new Persona(no, ape, user);
+
                         PrestamoAutomovil pa = new PrestamoAutomovil(p, m, pres,
-                                tipo, marca, valor, p);
+                                tipo, marca, valor, per);
+
                         pa.establecervalorMensualPagoPrestamoAutomovil();
+
                         cadena1 = String.format("%s %s\n------------------------------\n",
                                 cadena1, pa);
                         break;
@@ -87,19 +106,29 @@ public class Ejecutor {
                         System.out.println("Ingrese el numero de meses");
                         int mes = entry.nextInt();
                         entry.nextLine();
+
                         System.out.println("Ingrese la ciudad del prestamo");
                         String prest = entry.nextLine();
+
                         System.out.println("Ingrese el nivel de estudio");
                         String est = entry.nextLine();
+
                         System.out.println("Ingrese el nombre de la unidad educativa");
                         String nedu = entry.nextLine();
+
                         System.out.println("Ingrese las siglas de la unidad educativa");
                         String siglas = entry.nextLine();
+
                         System.out.println("Ingrese el valor de la carrera");
                         double valo = entry.nextDouble();
-                        InstitucionEducativa ie = new InstitucionEducativa(nedu, siglas);
-                        PrestamoEducativo pe = new PrestamoEducativo(p, mes, prest, est, ie, valo);
+
+                        InstitucionEducativa ie = new InstitucionEducativa(
+                                nedu, siglas);
+                        PrestamoEducativo pe = new PrestamoEducativo(
+                                p, mes, prest, est, ie, valo);
+
                         pe.establecerValorMensualPrestamoCarrera();
+
                         cadena2 = String.format("%s %s\n----------------------------------\n",
                                 cadena2, pe);
                         break;
